@@ -11,24 +11,26 @@
                     <Label x:Name="Question" HorizontalOptions="FillAndExpand" Margin="0,10" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="AnswerOne" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" />
+                    <Button x:Name="AnswerOneBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
+                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="AnswerTwo" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" />
+                    <Button x:Name="AnswerTwoBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
+                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="AnswerThree" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" />
+                    <Button x:Name="AnswerThreeBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
+                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="AnswerFour" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" />
+                    <Button x:Name="AnswerFourBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
+                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="NextSportsBtn" HorizontalOptions="EndAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Text="NEXT" Clicked="NextSportsBtn_Clicked"/>
+                            BackgroundColor="Lavender" Text="NEXT" Clicked="NextSportsBtn_Clicked" />
+                    <Button x:Name="EndSportsBtn" HorizontalOptions="EndAndExpand" Margin="0,10" CornerRadius="15" 
+                            BackgroundColor="Lavender" Text="End of Quiz" IsVisible="False" IsEnabled="False" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>
