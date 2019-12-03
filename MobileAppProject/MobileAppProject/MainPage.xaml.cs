@@ -13,5 +13,20 @@ namespace MobileAppProject
         {
             InitializeComponent();
         }
+
+        private void GenKnowledgeBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GenKnowledgeSection());
+        }
+
+        private void GeographyBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GeographySection());
+        }
+
+        private void SportsBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SportsSection());
+        }
     }
 }
