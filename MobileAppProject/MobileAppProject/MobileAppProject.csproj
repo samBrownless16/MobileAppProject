@@ -10,10 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\ques3.png" />
     <None Remove="Images\quiz_main.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\ques3.png" />
     <EmbeddedResource Include="Images\quiz_main.png" />
   </ItemGroup>
 

@@ -39,7 +39,15 @@ namespace MobileAppProject
 
             questions = questionGenerator.GetSportQuestions();
             questionGenerator.ShuffleQuestionOrAnswerNumbers(questionNumber);
+            LoadQuestionImage();
             DisplayQuestion(currentQuestion);
+        }
+
+        private void LoadQuestionImage()
+        {
+            var assembly = typeof(SportsSection);
+            string imageLocation = "MobileAppProject.Images.ques3.png";
+            QuestionImage.Source = ImageSource.FromResource(imageLocation, assembly);
         }
 
         private void DisplayQuestion(int currQues)
