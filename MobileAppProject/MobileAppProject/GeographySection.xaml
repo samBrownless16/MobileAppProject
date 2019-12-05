@@ -3,10 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppProject.GeographySection">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="ContentPage" BackgroundColor="#f2fffc">
+            <StackLayout x:Name="QuestionArea">
+                <Image x:Name="QuestionImage" Margin="15" Aspect="AspectFill" HeightRequest="120" WidthRequest="150" />
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="QuestionLbl" HorizontalOptions="CenterAndExpand" Margin="20,0,20,0" FontSize="Small" FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="AnswerOneBtn" HorizontalOptions="FillAndExpand" Margin="5,50,5,20" CornerRadius="15" 
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="AnswerTwoBtn" HorizontalOptions="FillAndExpand" Margin="5,0,5,20" CornerRadius="15" 
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="AnswerThreeBtn" HorizontalOptions="FillAndExpand" Margin="5,0,5,0" CornerRadius="15" 
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="AnswerFourBtn" HorizontalOptions="FillAndExpand" Margin="5,20,5,20" CornerRadius="15" 
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="NextQuestionBtn" HorizontalOptions="EndAndExpand" Margin="0,10,5,0" CornerRadius="15" 
+                            BackgroundColor="LightGray" Text="Next" Clicked="NextQuestionBtn_Clicked" />
+                    <Button x:Name="EndQuizBtn" HorizontalOptions="EndAndExpand" Margin="0,10,5,0" CornerRadius="15" 
+                            BackgroundColor="LightGray" Text="End of Quiz" IsVisible="False" IsEnabled="False" Clicked="EndQuizBtn_Clicked" />
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
