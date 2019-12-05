@@ -26,7 +26,7 @@ namespace MobileAppProject
         private int answerButtonReset;
         private bool incorrectAnswer;
         private Button answerSelected;
-        private Color unAnsweredColour = Color.Lavender;
+        private Color unAnsweredColour = Color.LightGray;
         private Color correctAnswerColor = Color.Green;
         private Color inCorrectAnswerColor = Color.Red;
 
@@ -46,7 +46,7 @@ namespace MobileAppProject
         {
             NextSportsBtn.IsEnabled = false;
             questionGenerator.ShuffleQuestionOrAnswerNumbers(answerNumber); // shuffle the order in which Answers appear
-            Question.Text = questions[questionNumber[currQues]][0];
+            QuestionLbl.Text = questions[questionNumber[currQues]][0];
             AnswerOneBtn.Text = questions[questionNumber[currQues]][answerNumber[0]];
             AnswerTwoBtn.Text = questions[questionNumber[currQues]][answerNumber[1]];
             AnswerThreeBtn.Text = questions[questionNumber[currQues]][answerNumber[2]];

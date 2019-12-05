@@ -4,33 +4,32 @@
              x:Class="MobileAppProject.SportsSection">
     <ContentPage.Content>
 
-        <StackLayout x:Name="ContentPage">
-            <StackLayout x:Name="MainMenu" Margin="0,10,0,0" BackgroundColor="DarkGray" HorizontalOptions="CenterAndExpand" 
-                     VerticalOptions="CenterAndExpand">
-                <StackLayout x:Name="QuestionLbl" Orientation="Horizontal">
-                    <Label x:Name="Question" HorizontalOptions="FillAndExpand" Margin="25,15,25,15" />
+        <StackLayout x:Name="ContentPage" BackgroundColor="#f2fffc">
+            <StackLayout x:Name="QuestionArea">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="QuestionLbl" HorizontalOptions="CenterAndExpand" Margin="20,15,20,15" FontSize="Small" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="AnswerOneBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="AnswerTwoBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="AnswerThreeBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="AnswerFourBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Clicked="Answer_Clicked" />
+                            BackgroundColor="LightGray" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Button x:Name="NextSportsBtn" HorizontalOptions="EndAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Text="Next" Clicked="NextSportsBtn_Clicked" />
+                            BackgroundColor="LightGray" Text="Next" Clicked="NextSportsBtn_Clicked" />
                     <Button x:Name="EndSportsBtn" HorizontalOptions="EndAndExpand" Margin="0,10" CornerRadius="15" 
-                            BackgroundColor="Lavender" Text="End of Quiz" IsVisible="False" IsEnabled="False" Clicked="EndSportsBtn_Clicked" />
+                            BackgroundColor="LightGray" Text="End of Quiz" IsVisible="False" IsEnabled="False" Clicked="EndSportsBtn_Clicked" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>
