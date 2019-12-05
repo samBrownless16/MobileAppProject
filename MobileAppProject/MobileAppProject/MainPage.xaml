@@ -4,22 +4,22 @@
              xmlns:local="clr-namespace:MobileAppProject"
              x:Class="MobileAppProject.MainPage">
 
-    <StackLayout x:Name="ContentPage">
-        <StackLayout x:Name="MainMenu" Margin="0,10,0,0" BackgroundColor="DarkGray" HorizontalOptions="CenterAndExpand" 
-                     VerticalOptions="CenterAndExpand">
+    <StackLayout x:Name="ContentPage" BackgroundColor="#f2fffc">
+        <Image x:Name="MainImage" Margin="15" Aspect="Fill" HeightRequest="250" WidthRequest="250" />
+        <Label Text="Select Your Quiz Category Below!" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
+        <StackLayout x:Name="MainMenu" Margin="0,10,0,0" WidthRequest="200" HeightRequest="200"><!--HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">-->
             <StackLayout x:Name="Sports" Orientation="Horizontal">
-                <Button x:Name="SportsBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                        Text="Sports" BackgroundColor="Green" Clicked="SportsBtn_Clicked"/>
+                <Button x:Name="SportsBtn" HorizontalOptions="FillAndExpand" Margin="5,20,5,20" CornerRadius="15" 
+                        Text="Sports" BackgroundColor="#99ff99" Clicked="SportsBtn_Clicked" />
             </StackLayout>
             <StackLayout x:Name="Geography" Orientation="Horizontal">
-                <Button x:Name="GeographyBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15" 
-                        Text="Geography" BackgroundColor="Lavender" Clicked="GeographyBtn_Clicked"/>
+                <Button x:Name="GeographyBtn" HorizontalOptions="FillAndExpand" Margin="5,0,5,0" CornerRadius="15" 
+                        Text="Geography" BackgroundColor="#80ccff" Clicked="GeographyBtn_Clicked" />
             </StackLayout>
             <StackLayout x:Name="GenKnowledge" Orientation="Horizontal">
-                <Button x:Name="GenKnowledgeBtn" HorizontalOptions="FillAndExpand" Margin="0,10" CornerRadius="15"   
-                        Text="General Knowledge" BackgroundColor="Yellow" Clicked="GenKnowledgeBtn_Clicked"/>
+                <Button x:Name="GenKnowledgeBtn" HorizontalOptions="FillAndExpand" Margin="5,20,5,20" CornerRadius="15"   
+                        Text="General Knowledge" BackgroundColor="#ff9999" Clicked="GenKnowledgeBtn_Clicked" />
             </StackLayout>
         </StackLayout>
     </StackLayout>
-
 </ContentPage>

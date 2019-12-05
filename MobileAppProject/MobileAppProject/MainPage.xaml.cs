@@ -12,6 +12,14 @@ namespace MobileAppProject
         public MainPage()
         {
             InitializeComponent();
+            LoadMainScreenImage();
+        }
+
+        private void LoadMainScreenImage()
+        {
+            var assembly = typeof(MainPage);
+            string imageLocation = "MobileAppProject.Images.quiz_main.png";
+            MainImage.Source = ImageSource.FromResource(imageLocation, assembly);
         }
 
         private void GenKnowledgeBtn_Clicked(object sender, EventArgs e)
