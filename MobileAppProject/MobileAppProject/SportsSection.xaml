@@ -27,10 +27,10 @@
                             BackgroundColor="LightGray" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="NextSportsBtn" HorizontalOptions="EndAndExpand" Margin="0,10,5,0" CornerRadius="15" 
-                            BackgroundColor="LightGray" Text="Next" Clicked="NextSportsBtn_Clicked" />
-                    <Button x:Name="EndSportsBtn" HorizontalOptions="EndAndExpand" Margin="0,10,5,0" CornerRadius="15" 
-                            BackgroundColor="LightGray" Text="End of Quiz" IsVisible="False" IsEnabled="False" Clicked="EndSportsBtn_Clicked" />
+                    <Button x:Name="NextQuestionBtn" HorizontalOptions="EndAndExpand" Margin="0,10,5,0" CornerRadius="15" 
+                            BackgroundColor="LightGray" Text="Next" Clicked="NextQuestionBtn_Clicked" />
+                    <Button x:Name="EndQuizBtn" HorizontalOptions="EndAndExpand" Margin="0,10,5,0" CornerRadius="15" 
+                            BackgroundColor="LightGray" Text="End of Quiz" IsVisible="False" IsEnabled="False" Clicked="EndQuizBtn_Clicked" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

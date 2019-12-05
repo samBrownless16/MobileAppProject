@@ -52,7 +52,7 @@ namespace MobileAppProject
 
         private void DisplayQuestion(int currQues)
         {
-            NextSportsBtn.IsEnabled = false;
+            NextQuestionBtn.IsEnabled = false;
             questionGenerator.ShuffleQuestionOrAnswerNumbers(answerNumber); // shuffle the order in which Answers appear
             QuestionLbl.Text = questions[questionNumber[currQues]][0];
             AnswerOneBtn.Text = questions[questionNumber[currQues]][answerNumber[0]];
@@ -61,7 +61,7 @@ namespace MobileAppProject
             AnswerFourBtn.Text = questions[questionNumber[currQues]][answerNumber[3]];
         }
 
-        private void NextSportsBtn_Clicked(object sender, EventArgs e)
+        private void NextQuestionBtn_Clicked(object sender, EventArgs e)
         {          
             currentQuestion++;
             answerSelected.BackgroundColor = unAnsweredColour; // reset button color
@@ -86,8 +86,8 @@ namespace MobileAppProject
 
             if (currentQuestion == (MAX_QUESTIONS - 1))
             {
-                NextSportsBtn.IsVisible = false;
-                EndSportsBtn.IsVisible = true;
+                NextQuestionBtn.IsVisible = false;
+                EndQuizBtn.IsVisible = true;
             }
             LoadQuestionImage();
             DisplayQuestion(currentQuestion);
@@ -134,14 +134,14 @@ namespace MobileAppProject
 
                 if (currentQuestion == (MAX_QUESTIONS - 1))
                 {
-                    EndSportsBtn.IsEnabled = true;
+                    EndQuizBtn.IsEnabled = true;
                 }
                 else
-                    NextSportsBtn.IsEnabled = true;
+                    NextQuestionBtn.IsEnabled = true;
             }
         }
 
-        private void EndSportsBtn_Clicked(object sender, EventArgs e)
+        private void EndQuizBtn_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Quiz Score", "You Scored - " + correctAnswerCounter + "/" + MAX_QUESTIONS, "Ok");
             Navigation.PopAsync();
