@@ -46,7 +46,7 @@ namespace MobileAppProject
         private void LoadQuestionImage()
         {
             var assembly = typeof(SportsSection);
-            string imageLocation = "MobileAppProject.Images.ques3.png";
+            string imageLocation = questionGenerator.GetQuestionImages(currentQuestion);
             QuestionImage.Source = ImageSource.FromResource(imageLocation, assembly);
         }
 
@@ -89,6 +89,7 @@ namespace MobileAppProject
                 NextSportsBtn.IsVisible = false;
                 EndSportsBtn.IsVisible = true;
             }
+            LoadQuestionImage();
             DisplayQuestion(currentQuestion);
         }
 

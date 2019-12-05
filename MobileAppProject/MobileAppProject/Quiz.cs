@@ -43,6 +43,14 @@ namespace MobileAppProject
                 arr[index] = arr[i];
                 arr[i] = temp;
             }
-        }  
+        }
+
+        public string GetQuestionImages(int currQues)
+        {
+            if (currQues % 2 == 0)
+                return "MobileAppProject.Images.question_one.png";
+            else
+                return "MobileAppProject.Images.question_two.png";
+        }
     }
 }
