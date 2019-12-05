@@ -37,7 +37,7 @@ namespace MobileAppProject
             if (questionGenerator == null)
                 questionGenerator = new Quiz();
 
-            questions = questionGenerator.GetSportQuestions(); // SBSB
+            questions = questionGenerator.GetGeographyQuestions();
             questionGenerator.ShuffleQuestionOrAnswerNumbers(questionNumber);
             LoadQuestionImage();
             DisplayQuestion(currentQuestion);
