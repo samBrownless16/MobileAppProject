@@ -11,7 +11,7 @@
                     <Label x:Name="QuestionLbl" HorizontalOptions="CenterAndExpand" Margin="20,0,20,0" FontSize="Small" FontAttributes="Bold" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="AnswerOneBtn" HorizontalOptions="FillAndExpand" Margin="5,50,5,20" CornerRadius="15" 
+                    <Button x:Name="AnswerOneBtn" HorizontalOptions="FillAndExpand" Margin="5,40,5,20" CornerRadius="15" 
                             BackgroundColor="LightGray" Clicked="Answer_Clicked" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
