@@ -6,7 +6,7 @@
 
     <StackLayout x:Name="ContentPage" BackgroundColor="#f2fffc">
         <Image x:Name="MainImage" Margin="15" Aspect="Fill" HeightRequest="250" WidthRequest="250" />
-        <Label Text="Select Your Quiz Category Below!" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
+        <Label Text="Select A Quiz Category Below!" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
         <StackLayout x:Name="MainMenu" Margin="0,10,0,0" WidthRequest="200" HeightRequest="200"><!--HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">-->
             <StackLayout x:Name="Sports" Orientation="Horizontal">
                 <Button x:Name="SportsBtn" HorizontalOptions="FillAndExpand" Margin="5,20,5,20" CornerRadius="15" 
