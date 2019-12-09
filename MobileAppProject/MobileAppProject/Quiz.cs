@@ -46,6 +46,13 @@ namespace MobileAppProject
             new string[] { "What is the Largest County in Ireland by Area?", "Galway", "Mayo", "Cork", "Donegal", "Cork" }
         };
 
+        private readonly string[][] questionsGenKnowledge =
+        {
+            // {0, 1, 2, 3, 4, 5 } - Correct Answer stored at index 5
+            new string[] { "Which River Flows through Paris?", "River Seine", "River Loire", "River Meuse", "River Rhine", "River Seine" }
+        };
+
+        // retrun questions to relevant category
         public string[][] GetSportQuestions()
         {
             return questionsSport;
@@ -56,6 +63,12 @@ namespace MobileAppProject
             return questionsGeography;
         }
 
+        public string[][] GetGenKnowledgeQuestions()
+        {
+            return questionsSport;//questionsGenKnowledge;
+        }
+
+        // Shuffle the Question and Answer Number arrays so the order they appear is not always the same
         public void ShuffleQuestionOrAnswerNumbers(int[] arr)
         {
             Random rand = new Random(DateTime.Now.Millisecond);
@@ -70,6 +83,7 @@ namespace MobileAppProject
             }
         }
 
+        // Alternate between 2 images every other question
         public string GetQuestionImages(int currQues)
         {
             if (currQues % 2 == 0)

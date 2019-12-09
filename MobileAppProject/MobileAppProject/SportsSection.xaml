@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppProject.SportsSection">
     <ContentPage.Content>
-
         <StackLayout x:Name="ContentPage" BackgroundColor="#f2fffc">
             <StackLayout x:Name="QuestionArea">
                 <Image x:Name="QuestionImage" Margin="15" Aspect="AspectFill" HeightRequest="120" WidthRequest="150" />
@@ -34,6 +33,5 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

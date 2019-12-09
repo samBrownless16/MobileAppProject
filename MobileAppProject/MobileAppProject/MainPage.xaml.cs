@@ -15,6 +15,7 @@ namespace MobileAppProject
             LoadMainScreenImage();
         }
 
+        // Main screen image
         private void LoadMainScreenImage()
         {
             var assembly = typeof(MainPage);
@@ -22,6 +23,7 @@ namespace MobileAppProject
             MainImage.Source = ImageSource.FromResource(imageLocation, assembly);
         }
 
+        // Add category page selected to stack and navigate to it
         private void GenKnowledgeBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new GenKnowledgeSection());

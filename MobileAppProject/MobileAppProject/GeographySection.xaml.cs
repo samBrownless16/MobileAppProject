@@ -19,7 +19,6 @@ namespace MobileAppProject
         private string[][] questions;
         private int[] questionNumber = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         private int[] answerNumber = new int[] { 1, 2, 3, 4 };
-
         private int currentQuestion = 0; // start at Question 1 (index 0)
         private int sameQuestion = -1;
         private int correctAnswerCounter = 0;
@@ -37,8 +36,8 @@ namespace MobileAppProject
             if (questionGenerator == null)
                 questionGenerator = new Quiz();
 
-            questions = questionGenerator.GetGeographyQuestions();
-            questionGenerator.ShuffleQuestionOrAnswerNumbers(questionNumber);
+            questions = questionGenerator.GetGeographyQuestions(); // Get questions from Quiz.cs 
+            questionGenerator.ShuffleQuestionOrAnswerNumbers(questionNumber); // Shuffle array so Question order is randomised
             LoadQuestionImage();
             DisplayQuestion(currentQuestion);
         }
@@ -46,15 +45,16 @@ namespace MobileAppProject
         private void LoadQuestionImage()
         {
             var assembly = typeof(GeographySection);
-            string imageLocation = questionGenerator.GetQuestionImages(currentQuestion);
+            string imageLocation = questionGenerator.GetQuestionImages(currentQuestion); // Get image from Quiz.cs
             QuestionImage.Source = ImageSource.FromResource(imageLocation, assembly);
         }
 
         private void DisplayQuestion(int currQues)
         {
-            NextQuestionBtn.IsEnabled = false;
+            NextQuestionBtn.IsEnabled = false; // Disable Next button until an answer has been selected
             questionGenerator.ShuffleQuestionOrAnswerNumbers(answerNumber); // shuffle the order in which Answers appear
-            QuestionLbl.Text = questions[questionNumber[currQues]][0];
+            // Assign the question and answer text
+            QuestionLbl.Text = questions[questionNumber[currQues]][0]; // questionNumber array sets index for the questions array
             AnswerOneBtn.Text = questions[questionNumber[currQues]][answerNumber[0]];
             AnswerTwoBtn.Text = questions[questionNumber[currQues]][answerNumber[1]];
             AnswerThreeBtn.Text = questions[questionNumber[currQues]][answerNumber[2]];
@@ -63,9 +63,9 @@ namespace MobileAppProject
 
         private void NextQuestionBtn_Clicked(object sender, EventArgs e)
         {
-            currentQuestion++;
-            answerSelected.BackgroundColor = unAnsweredColour; // reset button color
-            if (incorrectAnswer)
+            currentQuestion++; // increment the current question number
+            answerSelected.BackgroundColor = unAnsweredColour; // reset selected answer button color
+            if (incorrectAnswer) // if incorrect answer selected reset the correct button color back from green
             {
                 switch (answerButtonReset)
                 {
@@ -83,7 +83,7 @@ namespace MobileAppProject
                         break;
                 }
             }
-
+            // if moving to question 10 display end quiz button and remove next button
             if (currentQuestion == (MAX_QUESTIONS - 1))
             {
                 NextQuestionBtn.IsVisible = false;
@@ -95,11 +95,13 @@ namespace MobileAppProject
 
         private void Answer_Clicked(object sender, EventArgs e)
         {
+            // Check that an answer has not already been selected to stop selecting multiple answers
             if (sameQuestion != currentQuestion)
             {
-                sameQuestion++;
-                answerSelected = (Button)sender;
+                sameQuestion++; // increment so level with currentQuestion to stop selecting multiple answers
+                answerSelected = (Button)sender; // button that was selected
 
+                // check if answer is right
                 if (answerSelected.Text.Equals(questions[questionNumber[currentQuestion]][CORRECT_ANSWER_INDEX]))
                 {
                     correctAnswerCounter++;
@@ -110,6 +112,8 @@ namespace MobileAppProject
                 {
                     incorrectAnswer = true;
                     answerSelected.BackgroundColor = inCorrectAnswerColor;
+
+                    // if incorrect answer is selected, find which button contains the correct answer and highlight green
                     if (AnswerOneBtn.Text.Equals(questions[questionNumber[currentQuestion]][CORRECT_ANSWER_INDEX]))
                     {
                         AnswerOneBtn.BackgroundColor = correctAnswerColor;
@@ -132,6 +136,7 @@ namespace MobileAppProject
                     }
                 }
 
+                // enable next or end quiz button after an answer has been selected
                 if (currentQuestion == (MAX_QUESTIONS - 1))
                 {
                     EndQuizBtn.IsEnabled = true;
@@ -143,8 +148,8 @@ namespace MobileAppProject
 
         private void EndQuizBtn_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Quiz Score", "You Scored - " + correctAnswerCounter + "/" + MAX_QUESTIONS, "Ok");
-            Navigation.PopAsync();
+            DisplayAlert("Quiz Score", "You Scored - " + correctAnswerCounter + "/" + MAX_QUESTIONS, "Ok"); // display score
+            Navigation.PopAsync(); // Pop page from stack to head back to the main page
         }
     }
 }
