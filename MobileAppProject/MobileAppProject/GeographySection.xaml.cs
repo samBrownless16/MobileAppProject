@@ -17,7 +17,7 @@ namespace MobileAppProject
 
         private Quiz questionGenerator;
         private string[][] questions;
-        private int[] questionNumber = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+        private int[] questionNumber = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
         private int[] answerNumber = new int[] { 1, 2, 3, 4 };
         private int currentQuestion = 0; // start at Question 1 (index 0)
         private int sameQuestion = -1;
